@@ -104,7 +104,7 @@ public class frontEndJuniorProgrammer implements Evaluator {
         values = new HashMap<>();
         values.put("Java",5);
         values.put("Python",5);
-        values.put("JavaScript",5);
+        //values.put("JavaScript",5);
         tokenMap.put(question,values);
 
 
