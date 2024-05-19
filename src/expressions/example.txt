@@ -1,0 +1,17 @@
+# Have you obtained any relevant certifications in networking?(True/False)
+True
+# How do you optimize the performance of a websites front end?(Short Text)
+memory management
+# Which programming language do you prefer: Python,JavaScript,Java,C?(Single Choice)
+Java
+# Which programming languages do you prefer: Python,JavaScript,Java,C?(Multiple Choice)
+Java,Python,JavaScript
+# How many years of programming you have ?(Integer Number)
+20
+# How many minutes are your breaks from programming ?(Decimal Number)
+20.00
+# What is your date of birth?(Date:dd/mm/yyyy)
+22/10/2003
+# What time would you like to come in to work?(HH:MM)
+10:40
+END

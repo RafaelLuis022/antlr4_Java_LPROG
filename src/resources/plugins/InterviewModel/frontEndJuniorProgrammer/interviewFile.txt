@@ -1,0 +1,9 @@
+# Are you familiar with any front end frameworks?(Short Text)
+react
+# How do you optimize the performance of a websites front end?(Short Text)
+memory management
+# What are the different types of HTML elements you commonly use?(Short Text)
+div
+# Which programming languages do you prefer: Python,JavaScript,Java,C?(Multiple Choice)
+Java,Python,JavaScript
+END

@@ -1,0 +1,7 @@
+# Have you obtained any relevant certifications in networking? (True/False)
+Certifications_Obtained:True
+# Which programming language do you prefer:Python , JavaScript , Java , C?(Single Choice)
+Python
+# When troubleshooting network issues, which of the following tools do you rely on most frequently (could choose 1 or more)?
+Ping,Traceroute,Wireshark,Netstat
+END

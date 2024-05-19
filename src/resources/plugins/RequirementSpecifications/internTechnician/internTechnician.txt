@@ -1,0 +1,7 @@
+#How would you describe the Technician role?(Short Text)
+assd
+# How many euros are 150 cents?(Decimal Number)
+1.54
+# What time would you like to come in to work?(HH:MM)
+10:40
+END
