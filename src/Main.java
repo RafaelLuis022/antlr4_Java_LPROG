@@ -1,23 +1,23 @@
-import resources.plugins.Evaluator;
-
-import java.lang.reflect.InvocationTargetException;
+import expressions.PluginsInterface;
 
 public class Main {
     public static void main(String[] args) {
         String dirPath = "resources.plugins.InterviewModel.frontEndJuniorProgrammer";
-        String dirName = dirPath.substring(dirPath.lastIndexOf('.') + 1);
+        String dirName = "Plugin";
+        String toEvaluateTxtPath = "src/resources/PluginsInput/interviews/frontEndJuniorProgrammer/interviewResult1.txt";
 
         try {
             // Load the class and instantiate it
             Class<?> clazz = Class.forName(dirPath + "." + dirName);
-            Evaluator as = (Evaluator) clazz.getDeclaredConstructor().newInstance();
+            PluginsInterface as = (PluginsInterface) clazz.getDeclaredConstructor().newInstance();
 
             // Call the evaluate method
-            int res = as.evaluate("src/"+dirPath.replace(".", "/"));
+            // TODO caminho relativo para dir path têm que ser verificado
+            int res = as.evaluate(toEvaluateTxtPath,"src/"+dirPath);
             System.out.println(res);
 
         } catch (Exception e) {
-            System.out.println("Error Preparing for evaluation" + e.getMessage());
+            System.out.println("Error Preparing for evaluation:" + e.getMessage());
             e.printStackTrace();
         }
     }

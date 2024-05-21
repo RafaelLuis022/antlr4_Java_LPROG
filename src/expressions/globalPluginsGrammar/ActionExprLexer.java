@@ -1,4 +1,4 @@
-package expressions;
+package expressions.globalPluginsGrammar;
 
 import org.antlr.v4.runtime.CharStream;
 
