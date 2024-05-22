@@ -129,35 +129,9 @@ public class EvaluatePlugins {
 
     public  boolean areQuestionsEqual(Map<String, Map<String, Integer>> map1, Map<String, List<String>> map2) {
 
-        if (!map1.keySet().equals(map2.keySet())) {
-            return false;
-        }
+        return map1.keySet().equals(map2.keySet());
 
-
-        for (String key : map1.keySet()) {
-            Map<String, Integer> map1Value = map1.get(key);
-            List<String> map2Value = map2.get(key);
-
-            if (!areValuesEqual(map1Value, map2Value)) {
-                return false;
-            }
-        }
-
-        return true;
     }
 
-    private  boolean areValuesEqual(Map<String, Integer> map1, List<String> list2) {
 
-        if (map1.size() != list2.size()) {
-            return false;
-        }
-
-        for (String key : map1.keySet()) {
-            if (!list2.contains(key)) {
-                return false;
-            }
-        }
-
-        return true;
-    }
 }
