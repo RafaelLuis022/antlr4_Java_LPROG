@@ -7,5 +7,5 @@ div
 # How happy are you with your work?(Range 1-5)
 5
 # Which programming languages do you prefer [A-Python,B-JavaScript,C-Java,D-C++]:?(Multiple Choice)
-X
+A,B,C
 END
