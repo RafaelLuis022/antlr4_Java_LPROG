@@ -1,13 +1,11 @@
 # Are you familiar with any front end frameworks?(Short Text)
 react->22;
 # How do you optimize the performance of a websites front end?(Short Text)
-memory management->22;
+react->22;
 # What are the different types of HTML elements you commonly use?(Short Text)
 div->22;
 # Which programming languages do you prefer [A-Python,B-JavaScript,C-Java,D-C++]:?(Multiple Choice)
-A->22;
-B->6;
-C->300;
+A,B,C->22;
 # How happy are you with your work?(Range 1-5)
-4->6;
+5->12;
 END

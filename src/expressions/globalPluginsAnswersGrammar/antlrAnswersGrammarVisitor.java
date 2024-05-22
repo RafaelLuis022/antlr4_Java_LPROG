@@ -1,4 +1,4 @@
-// Generated from C:/Users/rafae/Ambiente de Trabalho/uni/2Ano_2semestre/LPROG/ANTLR/antlr4/src/expressions/globalPluginsAnswersGrammar/antlrAnswersGrammar.g4 by ANTLR 4.13.1
+// Generated from C:/Users/HP/Desktop/lapr4/lprog/antlr4_Java_LPROG/src/expressions/globalPluginsAnswersGrammar/antlrAnswersGrammar.g4 by ANTLR 4.13.1
 package expressions.globalPluginsAnswersGrammar;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
@@ -29,15 +29,57 @@ public interface antlrAnswersGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitQuestions(antlrAnswersGrammarParser.QuestionsContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link antlrAnswersGrammarParser#answers}.
+	 * Visit a parse tree produced by {@link antlrAnswersGrammarParser#question_tf}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAnswers(antlrAnswersGrammarParser.AnswersContext ctx);
+	T visitQuestion_tf(antlrAnswersGrammarParser.Question_tfContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link antlrAnswersGrammarParser#type}.
+	 * Visit a parse tree produced by {@link antlrAnswersGrammarParser#question_timehour}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitType(antlrAnswersGrammarParser.TypeContext ctx);
+	T visitQuestion_timehour(antlrAnswersGrammarParser.Question_timehourContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link antlrAnswersGrammarParser#question_date}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitQuestion_date(antlrAnswersGrammarParser.Question_dateContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link antlrAnswersGrammarParser#question_numericalscale}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitQuestion_numericalscale(antlrAnswersGrammarParser.Question_numericalscaleContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link antlrAnswersGrammarParser#question_decimal}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitQuestion_decimal(antlrAnswersGrammarParser.Question_decimalContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link antlrAnswersGrammarParser#question_integer}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitQuestion_integer(antlrAnswersGrammarParser.Question_integerContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link antlrAnswersGrammarParser#question_shorttext}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitQuestion_shorttext(antlrAnswersGrammarParser.Question_shorttextContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link antlrAnswersGrammarParser#question_multiplechoice}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitQuestion_multiplechoice(antlrAnswersGrammarParser.Question_multiplechoiceContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link antlrAnswersGrammarParser#question_singlechoice}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitQuestion_singlechoice(antlrAnswersGrammarParser.Question_singlechoiceContext ctx);
 }

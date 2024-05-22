@@ -1,7 +1,26 @@
 import expressions.PluginsInterface;
+import expressions.globalPluginsAnswersGrammar.ActionExprAnswersLexer;
+import expressions.globalPluginsAnswersGrammar.EvalAnswersVisitor;
+import expressions.globalPluginsAnswersGrammar.antlrAnswersGrammarParser;
+import expressions.globalPluginsGrammar.EvalVisitor;
+import org.antlr.v4.runtime.CharStreams;
+import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.tree.ParseTree;
+
+import java.io.IOException;
+import java.nio.file.Path;
+import java.util.List;
+import java.util.Map;
 
 public class Main {
-    public static void main(String[] args) {
+
+
+    public static void main(String[] args) throws IOException {
+
+
+
+
+
         String dirPath = "resources.plugins.InterviewModel.frontEndJuniorProgrammer";
         String dirName = "Plugin";
         String toEvaluateTxtPath = "src/resources/PluginsInput/interviews/frontEndJuniorProgrammer/interviewResult1.txt";
@@ -20,5 +39,7 @@ public class Main {
             System.out.println("Error Preparing for evaluation:" + e.getMessage());
             e.printStackTrace();
         }
+
+
     }
 }
