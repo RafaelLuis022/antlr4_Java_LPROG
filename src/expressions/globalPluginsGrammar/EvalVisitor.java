@@ -130,11 +130,7 @@ public class EvalVisitor extends antlrGrammarBaseVisitor<Map<String,List<String>
 
         ls = List.of(ctx.ctx_answer.getText().split(","));
 
-        for (String s:ls){
-            System.out.println(s);
-        }
 
-        System.out.println(ls);
 
         tokenList.put(question,ls);
 

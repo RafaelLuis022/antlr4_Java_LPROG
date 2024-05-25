@@ -7,5 +7,5 @@ div->22;
 # Which programming languages do you prefer [A-Python,B-JavaScript,C-Java,D-C++]:?(Multiple Choice)
 A,B,C->22;
 # How happy are you with your work?(Range 1-5)
-5->12;
+1->12;
 END

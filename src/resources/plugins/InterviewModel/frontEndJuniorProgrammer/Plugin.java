@@ -12,15 +12,19 @@ public class Plugin implements PluginsInterface {
 
     @Override
     public String txtName() {
-        return "interviewBaseModel.txt";
+        return "BaseModel.txt";
     }
 
     private String allAnswersTxtName(){
-        return "interviewBaseAnswers.txt";
+        return "BaseAnswers.txt";
     }
+
+
+
 
     @Override
     public Integer evaluate(String toEvaluateTxtPath,String toThisDirPath) {
+
         String pathToAllAnswersTxt = toThisDirPath.replace(".","/") + "/" + allAnswersTxtName();
         EvaluatePlugins evaluatePlugins = new EvaluatePlugins(toEvaluateTxtPath,pathToAllAnswersTxt);
         return evaluatePlugins.evaluate();
