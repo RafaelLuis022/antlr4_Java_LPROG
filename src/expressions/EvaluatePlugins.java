@@ -108,16 +108,19 @@ public class EvaluatePlugins {
 
         for (String receivedQuestion : candidateAnswersMap.keySet()) {
             if (allquestionAnswerMap.containsKey(receivedQuestion)) {
-
-                for (String answer : candidateAnswersMap.get(receivedQuestion)) {
-                    if (allquestionAnswerMap.get(receivedQuestion).get(answer) != null) {
-                        grade += allquestionAnswerMap.get(receivedQuestion).get(answer);
+                for (String candidateAnswer : candidateAnswersMap.get(receivedQuestion)) {
+                    for (String respostaCorreta : allquestionAnswerMap.get(receivedQuestion).keySet()) {
+                        if (candidateAnswer.contains(respostaCorreta)) {
+                            grade += allquestionAnswerMap.get(receivedQuestion).get(respostaCorreta);
+                            break;
+                        }
                     }
                 }
             }
         }
         return grade;
     }
+
 
     public boolean areQuestionsEqual(Map<String, Map<String, Integer>> map1, Map<String, List<String>> map2) {
         return map1.keySet().equals(map2.keySet());
