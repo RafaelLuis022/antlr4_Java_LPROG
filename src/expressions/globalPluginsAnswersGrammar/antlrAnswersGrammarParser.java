@@ -42,7 +42,7 @@ public class antlrAnswersGrammarParser extends Parser {
 		return new String[] {
 			null, "'#Criteria:q='", "';grade_min='", "'n/a'", "'END'", "';'", null, 
 			null, "'->'", null, "'(True/False)'", "'(HH:MM)'", "'(Date:dd/mm/yyyy)'", 
-			"'(Multiple Choice)'", "'(Single Choice)'", "'(Range 1-5)'", "'(Decimal Number)'", 
+			"'(Multiple Choice)'", "'(Single Choice)'", "'(Range n1-n5)'", "'(Decimal Number)'", 
 			"'(Integer Number)'", "'(Short Text)'", "'10'", null, null, null, null, 
 			null, null, null, null, null, "' '"
 		};

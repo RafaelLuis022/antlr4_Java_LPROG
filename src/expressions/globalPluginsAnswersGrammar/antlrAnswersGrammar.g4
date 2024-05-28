@@ -33,7 +33,7 @@ question_singlechoice: ctx_question=QUESTION  ctx_type=TYPE_SINGLECHOICE NEWLINE
 NA: 'n/a';
 END: 'END';
 ENDOFLINE: ';';
-NUMERICALSCALEANSWER: [1-5];
+NUMERICALSCALEANSWER: 'n'[1-5];
 NUMERIC_VALUE: [0-9]+;
 BEFORE_VALUE_TOKEN: '->';
 NEWLINE: '\n'+;
@@ -42,7 +42,7 @@ TYPE_TIMEHOUR: '(HH:MM)';
 TYPE_DATE: '(Date:dd/mm/yyyy)';
 TYPE_MULTIPLECHOICE: '(Multiple Choice)';
 TYPE_SINGLECHOICE: '(Single Choice)';
-TYPE_NUMERICALSCALE: '(Range 1-5)';
+TYPE_NUMERICALSCALE: '(Range n1-n5)';
 TYPE_DECIMAL: '(Decimal Number)';
 TYPE_INTEGER: '(Integer Number)';
 TYPE_SHORTTEXT: '(Short Text)';

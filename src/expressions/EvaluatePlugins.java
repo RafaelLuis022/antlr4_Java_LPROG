@@ -23,6 +23,8 @@ public class EvaluatePlugins {
 
     private Map<String,Boolean> questionsRightOrWrong = new HashMap<>();
 
+    private final Map<String, String> errorMap = Map.of("errorcode", "-1");
+
     public EvaluatePlugins(String toEvaluateTxtPath, String allQuestionsAnswersTxtPath) {
         this.toEvaluateTxtPath = toEvaluateTxtPath;
         this.allQuestionsAnswersTxtPath = allQuestionsAnswersTxtPath;
@@ -35,14 +37,13 @@ public class EvaluatePlugins {
             if (!areQuestionsEqual(allQuestionsAnswersMap, toEvaluateMap)) {
                 System.out.println(areQuestionsEqual(allQuestionsAnswersMap, toEvaluateMap));
                 System.out.println("Questions are not equal");
-                return (Map<String, String>) new HashMap<>().put("errorcode","-1");
+                return errorMap;
             }
             return getFeedback(grade(toEvaluateMap, allQuestionsAnswersMap), allQuestionsAnswersMap);
         } catch (Exception e) {
 
             System.out.println("ERROR during evaluation: " + e.getMessage());
-            e.printStackTrace();
-            return (Map<String, String>) new HashMap<>().put("errorcode","-2");
+            return errorMap;
         }
     }
 
@@ -72,7 +73,7 @@ public class EvaluatePlugins {
         feedback.put("Minimum Correct Answers", minCorrectAnswersStr);
 
         if (!minCorrectAnswersStr.equals("n/a")) {
-            feedback.put("Correct Answers Comparison", correctAnswersCount >= minCorrectAnswers ? "Met the minimum" : "Did not meet the minimum");
+            feedback.put("Correct Answers Evaluation", correctAnswersCount >= minCorrectAnswers ? "Met the minimum" : "Did not meet the minimum");
         } else {
             feedback.put("Correct Answers Comparison", "n/a");
         }

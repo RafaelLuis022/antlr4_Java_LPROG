@@ -1,4 +1,4 @@
-// Generated from C:/Users/rafae/Ambiente de Trabalho/uni/2Ano_2semestre/LPROG/ANTLR/antlr4/src/expressions/globalPluginsGrammar/antlrGrammar.g4 by ANTLR 4.13.1
+// Generated from C:/Users/marci/OneDrive/Área de Trabalho/2324/2semestre/lprog/antlr4_Java_LPROG/src/expressions/globalPluginsGrammar/antlrGrammar.g4 by ANTLR 4.13.1
 package expressions.globalPluginsGrammar;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 

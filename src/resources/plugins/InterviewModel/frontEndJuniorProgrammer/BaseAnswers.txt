@@ -1,4 +1,4 @@
-#Criteria:q=n/a;grade_min=80
+#Criteria:q=3;grade_min=50
 # Are you familiar with any front end frameworks?(Short Text)
 react->22;
 # How do you optimize the performance of a websites front end?(Short Text)
@@ -7,6 +7,6 @@ react->22;
 div->22;
 # Which programming languages do you prefer [A-Python,B-JavaScript,C-Java,D-C++]:?(Multiple Choice)
 A,B,C->22;
-# How happy are you with your work?(Range 1-5)
-1->12;
+# How happy are you with your work?(Range n1-n5)
+n1->12;
 END
