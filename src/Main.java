@@ -24,7 +24,10 @@ public class Main {
 
 
         Plugin plugin = new Plugin(dirPath, toEvaluateTxtPath);
-        System.out.println(plugin.evaluate());
+        for (String q: plugin.evaluate().keySet()
+             ) {
+            System.out.println(q+":"+plugin.evaluate().get(q));
+        }
 
 
     }

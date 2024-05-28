@@ -1,4 +1,4 @@
-// Generated from C:/Users/HP/Desktop/lapr4/lprog/antlr4_Java_LPROG/src/expressions/globalPluginsAnswersGrammar/antlrAnswersGrammar.g4 by ANTLR 4.13.1
+// Generated from C:/Users/marci/OneDrive/Área de Trabalho/2324/2semestre/lprog/antlr4_Java_LPROG/src/expressions/globalPluginsAnswersGrammar/antlrAnswersGrammar.g4 by ANTLR 4.13.1
 package expressions.globalPluginsAnswersGrammar;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
@@ -28,6 +28,12 @@ public interface antlrAnswersGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitQuestions(antlrAnswersGrammarParser.QuestionsContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link antlrAnswersGrammarParser#criteria}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCriteria(antlrAnswersGrammarParser.CriteriaContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link antlrAnswersGrammarParser#question_tf}.
 	 * @param ctx the parse tree

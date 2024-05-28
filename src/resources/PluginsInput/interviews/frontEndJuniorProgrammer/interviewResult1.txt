@@ -4,8 +4,8 @@ react
 react
 # What are the different types of HTML elements you commonly use?(Short Text)
 div
-# How happy are you with your work?(Range 1-5)
-1
 # Which programming languages do you prefer [A-Python,B-JavaScript,C-Java,D-C++]:?(Multiple Choice)
 A,B,C
+# How happy are you with your work?(Range 1-5)
+1
 END

@@ -1,6 +1,7 @@
 import expressions.EvaluatePlugins;
 
 import java.io.*;
+import java.util.Map;
 
 
 public class Plugin {
@@ -14,7 +15,7 @@ public class Plugin {
         this.toEvaluateTxtPath = toEvaluateTxtPath;
     }
 
-    public int evaluate() {
+    public Map<String,String> evaluate() {
         String pathToAllAnswersTxt = dirPath.replace(".","/") + "/" + BASE_ANSWERS_TXT_NAME;
         EvaluatePlugins evaluatePlugins = new EvaluatePlugins(toEvaluateTxtPath,pathToAllAnswersTxt);
         return evaluatePlugins.evaluate();
@@ -34,6 +35,7 @@ public class Plugin {
         StringBuilder blankFormContent = new StringBuilder();
 
         try (BufferedReader br = new BufferedReader(new FileReader(baseAnswersPath))) {
+            br.readLine();
             String line;
             while ((line = br.readLine()) != null) {
                 if (line.trim().startsWith("#")) {

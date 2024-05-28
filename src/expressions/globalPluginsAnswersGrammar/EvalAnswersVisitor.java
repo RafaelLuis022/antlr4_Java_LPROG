@@ -1,9 +1,6 @@
 package expressions.globalPluginsAnswersGrammar;
 
-import expressions.globalPluginsGrammar.antlrGrammarParser;
-
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class EvalAnswersVisitor extends antlrAnswersGrammarBaseVisitor<Map<String, Map<String, Integer>>> {
@@ -11,10 +8,13 @@ public class EvalAnswersVisitor extends antlrAnswersGrammarBaseVisitor<Map<Strin
     private Map<String, Map<String, Integer>> tokenList;
 
 
+
+
     @Override
     public Map<String, Map<String, Integer>> visitStart(antlrAnswersGrammarParser.StartContext ctx) {
         tokenList = new HashMap<>();
         tokenList.putAll(visitListOfQuestions(ctx.listOfQuestions()));
+        tokenList.putAll(visitCriteria(ctx.listOfQuestions().criteria()));
         return tokenList;
     }
 
@@ -75,6 +75,32 @@ public class EvalAnswersVisitor extends antlrAnswersGrammarBaseVisitor<Map<Strin
     }
 
     @Override
+    public Map<String, Map<String, Integer>> visitCriteria(antlrAnswersGrammarParser.CriteriaContext ctx){
+
+
+        Integer criteria_q;
+        Integer   criteria_grademin;
+        try {
+             criteria_q = Integer.parseInt(ctx.ctx_q.getText());
+        } catch (NumberFormatException e) {
+            criteria_q = -1;
+        }
+        try {
+            criteria_grademin = Integer.parseInt(ctx.ctx_gm.getText());
+        }
+        catch (NumberFormatException e){
+            criteria_grademin = -1;
+        }
+
+        tokenList.put("criteria_q", Map.of("criteria_q",criteria_q));
+
+        tokenList.put("criteria_grademin", Map.of("criteria_grademin",criteria_grademin));
+
+
+        return tokenList;
+    }
+
+    @Override
     public Map<String, Map<String, Integer>> visitQuestion_singlechoice(antlrAnswersGrammarParser.Question_singlechoiceContext ctx) {
         return visitQuestionWithAnswer(ctx.ctx_question.getText(), ctx.ctx_answer.getText(), ctx.ctx_value.getText(),ctx.ctx_type.getText());
     }
@@ -101,5 +127,7 @@ public class EvalAnswersVisitor extends antlrAnswersGrammarBaseVisitor<Map<Strin
         tokenList.put(question, valueMap);
         return tokenList;
     }
+
+
 
 }

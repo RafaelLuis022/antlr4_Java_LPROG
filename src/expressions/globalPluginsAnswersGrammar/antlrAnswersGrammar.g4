@@ -6,7 +6,7 @@ start: listOfQuestions END;
 
 
 
-listOfQuestions: questions+;
+listOfQuestions:criteria questions+;
 
 questions: question_tf
         | question_timehour
@@ -18,7 +18,7 @@ questions: question_tf
         | question_integer
         | question_shorttext
         ;
-
+criteria: '#Criteria:q=' ctx_q=(NA|NUMERIC_VALUE) ';grade_min='ctx_gm=(NA|NUMERIC_VALUE) NEWLINE;
 question_tf: ctx_question=QUESTION  ctx_type=TYPE_TRUEFALSE NEWLINE ctx_answer= (TRUEFALSEANSWER | EMPTY ) BEFORE_VALUE_TOKEN ctx_value=NUMERIC_VALUE ENDOFLINE NEWLINE;
 question_timehour: ctx_question=QUESTION  ctx_type=TYPE_TIMEHOUR NEWLINE ctx_answer=(TIMEHOURANSWER| EMPTY ) BEFORE_VALUE_TOKEN ctx_value=NUMERIC_VALUE ENDOFLINE NEWLINE;
 question_date: ctx_question=QUESTION  ctx_type=TYPE_DATE NEWLINE ctx_answer=(DATEANSWER| EMPTY) BEFORE_VALUE_TOKEN ctx_value=NUMERIC_VALUE ENDOFLINE NEWLINE;
@@ -29,6 +29,8 @@ question_shorttext: ctx_question=QUESTION  ctx_type=TYPE_SHORTTEXT NEWLINE ctx_a
 question_multiplechoice:  ctx_question=QUESTION  ctx_type=TYPE_MULTIPLECHOICE NEWLINE ctx_answer=( MULTIPLECHOISEANSWER| SINGLECHOISEANSWER| EMPTY ) BEFORE_VALUE_TOKEN ctx_value=NUMERIC_VALUE ENDOFLINE NEWLINE;
 question_singlechoice: ctx_question=QUESTION  ctx_type=TYPE_SINGLECHOICE NEWLINE ctx_answer= (SINGLECHOISEANSWER | EMPTY ) BEFORE_VALUE_TOKEN ctx_value=NUMERIC_VALUE ENDOFLINE NEWLINE;
 
+
+NA: 'n/a';
 END: 'END';
 ENDOFLINE: ';';
 NUMERICALSCALEANSWER: [1-5];

@@ -1,10 +1,4 @@
-#Criteria:q=n/a;grade_min=60
-
-#Criteria:nr_q=10;grade_min=n/a
-#Criteria:nr_q=10;grade_min=6
-
-evalCriteria(ctx.q, ctx.grade, input_ctx)
-
+#Criteria:q=n/a;grade_min=80
 # Are you familiar with any front end frameworks?(Short Text)
 react->22;
 # How do you optimize the performance of a websites front end?(Short Text)
