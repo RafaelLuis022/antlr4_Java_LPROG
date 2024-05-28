@@ -29,7 +29,7 @@ public class Plugin {
         return evaluatePlugins.isSyntaxCorrect();
     }
 
-    public String generateBlankForm() {
+    public static  String generateBlankForm(String dirPath) {
         String baseAnswersPath = dirPath.replace(".", "/") + "/" + "BaseAnswers.txt";
         String blankFormPath = dirPath.replace(".", "/") + "/" + "BlankForm.txt";
         StringBuilder blankFormContent = new StringBuilder();
