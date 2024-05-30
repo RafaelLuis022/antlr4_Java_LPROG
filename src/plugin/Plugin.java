@@ -1,3 +1,5 @@
+package plugin;
+
 import expressions.EvaluatePlugins;
 
 import java.io.*;
@@ -6,7 +8,7 @@ import java.util.Map;
 
 public class Plugin {
 
-    private final String BASE_ANSWERS_TXT_NAME = "BaseAnswers.txt";
+    private static final String BASE_ANSWERS_TXT_NAME = "BaseAnswers.txt";
 
     private String dirPath;
     private String toEvaluateTxtPath;
@@ -16,7 +18,7 @@ public class Plugin {
     }
 
     public Map<String,String> evaluate() {
-        String pathToAllAnswersTxt = dirPath.replace(".","/") + "/" + BASE_ANSWERS_TXT_NAME;
+        String pathToAllAnswersTxt = dirPath + "/" + BASE_ANSWERS_TXT_NAME;
         EvaluatePlugins evaluatePlugins = new EvaluatePlugins(toEvaluateTxtPath,pathToAllAnswersTxt);
         return evaluatePlugins.evaluate();
     }
@@ -24,14 +26,14 @@ public class Plugin {
 
 
     public boolean isCorrect() {
-        String pathToAllAnswersTxt = dirPath.replace(".","/") + "/" + BASE_ANSWERS_TXT_NAME;
+        String pathToAllAnswersTxt = dirPath + "/" + BASE_ANSWERS_TXT_NAME;
         EvaluatePlugins evaluatePlugins = new EvaluatePlugins(toEvaluateTxtPath,pathToAllAnswersTxt);
         return evaluatePlugins.isSyntaxCorrect();
     }
 
     public static  String generateBlankForm(String dirPath) {
-        String baseAnswersPath = dirPath.replace(".", "/") + "/" + "BaseAnswers.txt";
-        String blankFormPath = dirPath.replace(".", "/") + "/" + "BlankForm.txt";
+        String baseAnswersPath = dirPath + "/" +  BASE_ANSWERS_TXT_NAME;
+        String blankFormPath = dirPath + "/" + "BlankForm.txt";
         StringBuilder blankFormContent = new StringBuilder();
 
         try (BufferedReader br = new BufferedReader(new FileReader(baseAnswersPath))) {

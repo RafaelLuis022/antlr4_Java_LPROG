@@ -1,7 +1,0 @@
-# In a relational database, a foreign key constraint ensures referential integrity by enforcing that a value in a column matches the primary key of another table? (True/False)
-True
-# How many years of experience do you have in back end programming?(Integer Number)
-10
-# What is your date of birth? (dd/mm/yyyy)
-10/10/2021
-END

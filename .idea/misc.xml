@@ -37,7 +37,7 @@
         <PerGrammarGenerationSettings>
           <option name="fileName" value="$PROJECT_DIR$/src/expressions/globalPluginsAnswersGrammar/antlrAnswersGrammar.g4" />
           <option name="autoGen" value="true" />
-          <option name="outputDir" value="C:\Users\HP\Desktop\lapr4\lprog\antlr4_Java_LPROG\src" />
+          <option name="outputDir" value="C:\Users\marci\OneDrive\Área de Trabalho\2324\2semestre\lprog\antlr4_Java_LPROG\src" />
           <option name="libDir" value="" />
           <option name="encoding" value="" />
           <option name="pkg" value="" />
@@ -48,7 +48,7 @@
         <PerGrammarGenerationSettings>
           <option name="fileName" value="$PROJECT_DIR$/src/expressions/globalPluginsGrammar/antlrGrammar.g4" />
           <option name="autoGen" value="true" />
-          <option name="outputDir" value="C:\Users\rafae\Ambiente de Trabalho\uni\2Ano_2semestre\LPROG\ANTLR\antlr4\src" />
+          <option name="outputDir" value="C:\Users\marci\OneDrive\Área de Trabalho\2324\2semestre\lprog\antlr4_Java_LPROG\src" />
           <option name="libDir" value="" />
           <option name="encoding" value="" />
           <option name="pkg" value="" />
@@ -59,7 +59,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" default="true" project-jdk-name="openjdk-20" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="SQLPlugin.ProjectConfiguration">

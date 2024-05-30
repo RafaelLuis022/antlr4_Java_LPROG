@@ -194,7 +194,6 @@ public class EvaluatePlugins {
                 parser.start();
                 return true;
             } catch (RuntimeException e) {
-                System.err.println(e.getMessage());
                 return false;
             }
         } else {
@@ -209,7 +208,6 @@ public class EvaluatePlugins {
                 parser.start();
                 return true;
             } catch (RuntimeException e) {
-                System.err.println(e.getMessage());
                 return false;
             }
         }

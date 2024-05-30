@@ -9,6 +9,6 @@ public class SyntaxErrorListener extends BaseErrorListener {
 
     @Override
     public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol, int line, int charPositionInLine, String msg, RecognitionException e) {
-        throw new RuntimeException("Erro de sintaxe na linhaa " + line + ":" + charPositionInLine + " - " + msg);
+        throw new RuntimeException("Erro de sintaxe na linha " + line + ":" + charPositionInLine + " - " + msg);
     }
 }
