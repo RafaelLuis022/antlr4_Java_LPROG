@@ -1,0 +1,11 @@
+# Are you familiar with any front end frameworks?(Short Text)
+a text input
+# How do you optimize the performance of a websites front end?(Short Text)
+a text input
+# What are the different types of HTML elements you commonly use?(Short Text)
+a text input
+# Which programming languages do you prefer [A-Python,B-JavaScript,C-Java,D-C++]:?(Multiple Choice)
+D
+# How happy are you with your work?(Range n1-n5)
+n1
+END

@@ -9,11 +9,14 @@ public class Main {
 
 
 
-        String dirPath = "";
-        String toEvaluateTxtPath = "";
+        String dirPath = "src/resources/input";
+        String toEvaluateTxtPath = "src/resources/input/BlankForm.txt";
+
 
 
         Plugin plugin = new Plugin(dirPath, toEvaluateTxtPath);
+
+
         for (String p: plugin.evaluate().keySet()){
             System.out.println(p + ":" + plugin.evaluate().get(p));
         }
