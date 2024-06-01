@@ -1,4 +1,4 @@
-// Generated from C:/Users/marci/OneDrive/Área de Trabalho/2324/2semestre/lprog/antlr4_Java_LPROG/src/expressions/globalPluginsGrammar/antlrGrammar.g4 by ANTLR 4.13.1
+// Generated from C:/Users/rafae/Ambiente de Trabalho/uni/2Ano_2semestre/LPROG/ANTLR/antlr4/src/expressions/globalPluginsGrammar/antlrGrammar.g4 by ANTLR 4.13.1
 package expressions.globalPluginsGrammar;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
@@ -17,12 +17,12 @@ public class antlrGrammarParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		END=1, NEWLINE=2, TYPE_TRUEFALSE=3, TYPE_TIMEHOUR=4, TYPE_DATE=5, TYPE_MULTIPLECHOICE=6, 
-		TYPE_SINGLECHOICE=7, TYPE_NUMERICALSCALE=8, TYPE_DECIMAL=9, TYPE_INTEGER=10, 
-		TYPE_SHORTTEXT=11, MAX_SHORT_TEXT_LENGHT=12, NUMERICALSCALEANSWER=13, 
-		DATEANSWER=14, DECIMALANSWER=15, TIMEHOURANSWER=16, INTEGERANSWER=17, 
-		TRUEFALSEANSWER=18, QUESTION=19, SINGLECHOISEANSWER=20, SHORTTEXTANSWER=21, 
-		MULTIPLECHOISEANSWER=22, EMPTY=23, STRING=24, CHAR=25, WS=26;
+		NA=1, END=2, NEWLINE=3, TYPE_TRUEFALSE=4, TYPE_TIMEHOUR=5, TYPE_DATE=6, 
+		TYPE_MULTIPLECHOICE=7, TYPE_SINGLECHOICE=8, TYPE_NUMERICALSCALE=9, TYPE_DECIMAL=10, 
+		TYPE_INTEGER=11, TYPE_SHORTTEXT=12, MAX_SHORT_TEXT_LENGHT=13, NUMERICALSCALEANSWER=14, 
+		DATEANSWER=15, DECIMALANSWER=16, TIMEHOURANSWER=17, INTEGERANSWER=18, 
+		TRUEFALSEANSWER=19, QUESTION=20, SINGLECHOISEANSWER=21, SHORTTEXTANSWER=22, 
+		EMPTY=23, MULTIPLECHOISEANSWER=24, STRING=25, CHAR=26, WS=27;
 	public static final int
 		RULE_start = 0, RULE_listOfQuestions = 1, RULE_questions = 2, RULE_question_tf = 3, 
 		RULE_question_timehour = 4, RULE_question_date = 5, RULE_question_numericalscale = 6, 
@@ -39,21 +39,21 @@ public class antlrGrammarParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'END'", null, "'(True/False)'", "'(HH:MM)'", "'(Date:dd/mm/yyyy)'", 
+			null, "'n/a'", "'END'", null, "'(True/False)'", "'(HH:MM)'", "'(Date:dd/mm/yyyy)'", 
 			"'(Multiple Choice)'", "'(Single Choice)'", "'(Range n1-n5)'", "'(Decimal Number)'", 
 			"'(Integer Number)'", "'(Short Text)'", "'10'", null, null, null, null, 
-			null, null, null, null, null, null, "' '"
+			null, null, null, null, null, "' '"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "END", "NEWLINE", "TYPE_TRUEFALSE", "TYPE_TIMEHOUR", "TYPE_DATE", 
+			null, "NA", "END", "NEWLINE", "TYPE_TRUEFALSE", "TYPE_TIMEHOUR", "TYPE_DATE", 
 			"TYPE_MULTIPLECHOICE", "TYPE_SINGLECHOICE", "TYPE_NUMERICALSCALE", "TYPE_DECIMAL", 
 			"TYPE_INTEGER", "TYPE_SHORTTEXT", "MAX_SHORT_TEXT_LENGHT", "NUMERICALSCALEANSWER", 
 			"DATEANSWER", "DECIMALANSWER", "TIMEHOURANSWER", "INTEGERANSWER", "TRUEFALSEANSWER", 
-			"QUESTION", "SINGLECHOISEANSWER", "SHORTTEXTANSWER", "MULTIPLECHOISEANSWER", 
-			"EMPTY", "STRING", "CHAR", "WS"
+			"QUESTION", "SINGLECHOISEANSWER", "SHORTTEXTANSWER", "EMPTY", "MULTIPLECHOISEANSWER", 
+			"STRING", "CHAR", "WS"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -335,7 +335,7 @@ public class antlrGrammarParser extends Parser {
 		public TerminalNode QUESTION() { return getToken(antlrGrammarParser.QUESTION, 0); }
 		public TerminalNode TYPE_TRUEFALSE() { return getToken(antlrGrammarParser.TYPE_TRUEFALSE, 0); }
 		public TerminalNode TRUEFALSEANSWER() { return getToken(antlrGrammarParser.TRUEFALSEANSWER, 0); }
-		public TerminalNode EMPTY() { return getToken(antlrGrammarParser.EMPTY, 0); }
+		public TerminalNode NA() { return getToken(antlrGrammarParser.NA, 0); }
 		public Question_tfContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -363,7 +363,7 @@ public class antlrGrammarParser extends Parser {
 			setState(46);
 			((Question_tfContext)_localctx).ctx_answer = _input.LT(1);
 			_la = _input.LA(1);
-			if ( !(_la==TRUEFALSEANSWER || _la==EMPTY) ) {
+			if ( !(_la==NA || _la==TRUEFALSEANSWER) ) {
 				((Question_tfContext)_localctx).ctx_answer = (Token)_errHandler.recoverInline(this);
 			}
 			else {
@@ -398,7 +398,7 @@ public class antlrGrammarParser extends Parser {
 		public TerminalNode QUESTION() { return getToken(antlrGrammarParser.QUESTION, 0); }
 		public TerminalNode TYPE_TIMEHOUR() { return getToken(antlrGrammarParser.TYPE_TIMEHOUR, 0); }
 		public TerminalNode TIMEHOURANSWER() { return getToken(antlrGrammarParser.TIMEHOURANSWER, 0); }
-		public TerminalNode EMPTY() { return getToken(antlrGrammarParser.EMPTY, 0); }
+		public TerminalNode NA() { return getToken(antlrGrammarParser.NA, 0); }
 		public Question_timehourContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -426,7 +426,7 @@ public class antlrGrammarParser extends Parser {
 			setState(52);
 			((Question_timehourContext)_localctx).ctx_answer = _input.LT(1);
 			_la = _input.LA(1);
-			if ( !(_la==TIMEHOURANSWER || _la==EMPTY) ) {
+			if ( !(_la==NA || _la==TIMEHOURANSWER) ) {
 				((Question_timehourContext)_localctx).ctx_answer = (Token)_errHandler.recoverInline(this);
 			}
 			else {
@@ -461,7 +461,7 @@ public class antlrGrammarParser extends Parser {
 		public TerminalNode QUESTION() { return getToken(antlrGrammarParser.QUESTION, 0); }
 		public TerminalNode TYPE_DATE() { return getToken(antlrGrammarParser.TYPE_DATE, 0); }
 		public TerminalNode DATEANSWER() { return getToken(antlrGrammarParser.DATEANSWER, 0); }
-		public TerminalNode EMPTY() { return getToken(antlrGrammarParser.EMPTY, 0); }
+		public TerminalNode NA() { return getToken(antlrGrammarParser.NA, 0); }
 		public Question_dateContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -489,7 +489,7 @@ public class antlrGrammarParser extends Parser {
 			setState(58);
 			((Question_dateContext)_localctx).ctx_answer = _input.LT(1);
 			_la = _input.LA(1);
-			if ( !(_la==DATEANSWER || _la==EMPTY) ) {
+			if ( !(_la==NA || _la==DATEANSWER) ) {
 				((Question_dateContext)_localctx).ctx_answer = (Token)_errHandler.recoverInline(this);
 			}
 			else {
@@ -524,7 +524,7 @@ public class antlrGrammarParser extends Parser {
 		public TerminalNode QUESTION() { return getToken(antlrGrammarParser.QUESTION, 0); }
 		public TerminalNode TYPE_NUMERICALSCALE() { return getToken(antlrGrammarParser.TYPE_NUMERICALSCALE, 0); }
 		public TerminalNode NUMERICALSCALEANSWER() { return getToken(antlrGrammarParser.NUMERICALSCALEANSWER, 0); }
-		public TerminalNode EMPTY() { return getToken(antlrGrammarParser.EMPTY, 0); }
+		public TerminalNode NA() { return getToken(antlrGrammarParser.NA, 0); }
 		public Question_numericalscaleContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -552,7 +552,7 @@ public class antlrGrammarParser extends Parser {
 			setState(64);
 			((Question_numericalscaleContext)_localctx).ctx_answer = _input.LT(1);
 			_la = _input.LA(1);
-			if ( !(_la==NUMERICALSCALEANSWER || _la==EMPTY) ) {
+			if ( !(_la==NA || _la==NUMERICALSCALEANSWER) ) {
 				((Question_numericalscaleContext)_localctx).ctx_answer = (Token)_errHandler.recoverInline(this);
 			}
 			else {
@@ -587,7 +587,7 @@ public class antlrGrammarParser extends Parser {
 		public TerminalNode QUESTION() { return getToken(antlrGrammarParser.QUESTION, 0); }
 		public TerminalNode TYPE_DECIMAL() { return getToken(antlrGrammarParser.TYPE_DECIMAL, 0); }
 		public TerminalNode DECIMALANSWER() { return getToken(antlrGrammarParser.DECIMALANSWER, 0); }
-		public TerminalNode EMPTY() { return getToken(antlrGrammarParser.EMPTY, 0); }
+		public TerminalNode NA() { return getToken(antlrGrammarParser.NA, 0); }
 		public Question_decimalContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -615,7 +615,7 @@ public class antlrGrammarParser extends Parser {
 			setState(70);
 			((Question_decimalContext)_localctx).ctx_answer = _input.LT(1);
 			_la = _input.LA(1);
-			if ( !(_la==DECIMALANSWER || _la==EMPTY) ) {
+			if ( !(_la==NA || _la==DECIMALANSWER) ) {
 				((Question_decimalContext)_localctx).ctx_answer = (Token)_errHandler.recoverInline(this);
 			}
 			else {
@@ -650,7 +650,7 @@ public class antlrGrammarParser extends Parser {
 		public TerminalNode QUESTION() { return getToken(antlrGrammarParser.QUESTION, 0); }
 		public TerminalNode TYPE_INTEGER() { return getToken(antlrGrammarParser.TYPE_INTEGER, 0); }
 		public TerminalNode INTEGERANSWER() { return getToken(antlrGrammarParser.INTEGERANSWER, 0); }
-		public TerminalNode EMPTY() { return getToken(antlrGrammarParser.EMPTY, 0); }
+		public TerminalNode NA() { return getToken(antlrGrammarParser.NA, 0); }
 		public Question_integerContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -678,7 +678,7 @@ public class antlrGrammarParser extends Parser {
 			setState(76);
 			((Question_integerContext)_localctx).ctx_answer = _input.LT(1);
 			_la = _input.LA(1);
-			if ( !(_la==INTEGERANSWER || _la==EMPTY) ) {
+			if ( !(_la==NA || _la==INTEGERANSWER) ) {
 				((Question_integerContext)_localctx).ctx_answer = (Token)_errHandler.recoverInline(this);
 			}
 			else {
@@ -713,7 +713,7 @@ public class antlrGrammarParser extends Parser {
 		public TerminalNode QUESTION() { return getToken(antlrGrammarParser.QUESTION, 0); }
 		public TerminalNode TYPE_SHORTTEXT() { return getToken(antlrGrammarParser.TYPE_SHORTTEXT, 0); }
 		public TerminalNode SHORTTEXTANSWER() { return getToken(antlrGrammarParser.SHORTTEXTANSWER, 0); }
-		public TerminalNode EMPTY() { return getToken(antlrGrammarParser.EMPTY, 0); }
+		public TerminalNode NA() { return getToken(antlrGrammarParser.NA, 0); }
 		public Question_shorttextContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -741,7 +741,7 @@ public class antlrGrammarParser extends Parser {
 			setState(82);
 			((Question_shorttextContext)_localctx).ctx_answer = _input.LT(1);
 			_la = _input.LA(1);
-			if ( !(_la==SHORTTEXTANSWER || _la==EMPTY) ) {
+			if ( !(_la==NA || _la==SHORTTEXTANSWER) ) {
 				((Question_shorttextContext)_localctx).ctx_answer = (Token)_errHandler.recoverInline(this);
 			}
 			else {
@@ -777,7 +777,7 @@ public class antlrGrammarParser extends Parser {
 		public TerminalNode TYPE_MULTIPLECHOICE() { return getToken(antlrGrammarParser.TYPE_MULTIPLECHOICE, 0); }
 		public TerminalNode MULTIPLECHOISEANSWER() { return getToken(antlrGrammarParser.MULTIPLECHOISEANSWER, 0); }
 		public TerminalNode SINGLECHOISEANSWER() { return getToken(antlrGrammarParser.SINGLECHOISEANSWER, 0); }
-		public TerminalNode EMPTY() { return getToken(antlrGrammarParser.EMPTY, 0); }
+		public TerminalNode NA() { return getToken(antlrGrammarParser.NA, 0); }
 		public Question_multiplechoiceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -805,7 +805,7 @@ public class antlrGrammarParser extends Parser {
 			setState(88);
 			((Question_multiplechoiceContext)_localctx).ctx_answer = _input.LT(1);
 			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 13631488L) != 0)) ) {
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 18874370L) != 0)) ) {
 				((Question_multiplechoiceContext)_localctx).ctx_answer = (Token)_errHandler.recoverInline(this);
 			}
 			else {
@@ -840,7 +840,7 @@ public class antlrGrammarParser extends Parser {
 		public TerminalNode QUESTION() { return getToken(antlrGrammarParser.QUESTION, 0); }
 		public TerminalNode TYPE_SINGLECHOICE() { return getToken(antlrGrammarParser.TYPE_SINGLECHOICE, 0); }
 		public TerminalNode SINGLECHOISEANSWER() { return getToken(antlrGrammarParser.SINGLECHOISEANSWER, 0); }
-		public TerminalNode EMPTY() { return getToken(antlrGrammarParser.EMPTY, 0); }
+		public TerminalNode NA() { return getToken(antlrGrammarParser.NA, 0); }
 		public Question_singlechoiceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -868,7 +868,7 @@ public class antlrGrammarParser extends Parser {
 			setState(94);
 			((Question_singlechoiceContext)_localctx).ctx_answer = _input.LT(1);
 			_la = _input.LA(1);
-			if ( !(_la==SINGLECHOISEANSWER || _la==EMPTY) ) {
+			if ( !(_la==NA || _la==SINGLECHOISEANSWER) ) {
 				((Question_singlechoiceContext)_localctx).ctx_answer = (Token)_errHandler.recoverInline(this);
 			}
 			else {
@@ -892,7 +892,7 @@ public class antlrGrammarParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001\u001ab\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
+		"\u0004\u0001\u001bb\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
 		"\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004\u0002"+
 		"\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007\u0002"+
 		"\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0002\u000b\u0007\u000b\u0001"+
@@ -908,48 +908,48 @@ public class antlrGrammarParser extends Parser {
 		"\u0001\t\u0001\t\u0001\t\u0001\t\u0001\n\u0001\n\u0001\n\u0001\n\u0001"+
 		"\n\u0001\n\u0001\u000b\u0001\u000b\u0001\u000b\u0001\u000b\u0001\u000b"+
 		"\u0001\u000b\u0001\u000b\u0000\u0000\f\u0000\u0002\u0004\u0006\b\n\f\u000e"+
-		"\u0010\u0012\u0014\u0016\u0000\t\u0002\u0000\u0012\u0012\u0017\u0017\u0002"+
-		"\u0000\u0010\u0010\u0017\u0017\u0002\u0000\u000e\u000e\u0017\u0017\u0002"+
-		"\u0000\r\r\u0017\u0017\u0002\u0000\u000f\u000f\u0017\u0017\u0002\u0000"+
-		"\u0011\u0011\u0017\u0017\u0002\u0000\u0015\u0015\u0017\u0017\u0002\u0000"+
-		"\u0014\u0014\u0016\u0017\u0002\u0000\u0014\u0014\u0017\u0017^\u0000\u0018"+
-		"\u0001\u0000\u0000\u0000\u0002\u001c\u0001\u0000\u0000\u0000\u0004)\u0001"+
-		"\u0000\u0000\u0000\u0006+\u0001\u0000\u0000\u0000\b1\u0001\u0000\u0000"+
-		"\u0000\n7\u0001\u0000\u0000\u0000\f=\u0001\u0000\u0000\u0000\u000eC\u0001"+
-		"\u0000\u0000\u0000\u0010I\u0001\u0000\u0000\u0000\u0012O\u0001\u0000\u0000"+
-		"\u0000\u0014U\u0001\u0000\u0000\u0000\u0016[\u0001\u0000\u0000\u0000\u0018"+
-		"\u0019\u0003\u0002\u0001\u0000\u0019\u001a\u0005\u0001\u0000\u0000\u001a"+
-		"\u0001\u0001\u0000\u0000\u0000\u001b\u001d\u0003\u0004\u0002\u0000\u001c"+
-		"\u001b\u0001\u0000\u0000\u0000\u001d\u001e\u0001\u0000\u0000\u0000\u001e"+
-		"\u001c\u0001\u0000\u0000\u0000\u001e\u001f\u0001\u0000\u0000\u0000\u001f"+
-		"\u0003\u0001\u0000\u0000\u0000 *\u0003\u0006\u0003\u0000!*\u0003\b\u0004"+
-		"\u0000\"*\u0003\n\u0005\u0000#*\u0003\u0014\n\u0000$*\u0003\u0016\u000b"+
-		"\u0000%*\u0003\f\u0006\u0000&*\u0003\u000e\u0007\u0000\'*\u0003\u0010"+
-		"\b\u0000(*\u0003\u0012\t\u0000) \u0001\u0000\u0000\u0000)!\u0001\u0000"+
-		"\u0000\u0000)\"\u0001\u0000\u0000\u0000)#\u0001\u0000\u0000\u0000)$\u0001"+
-		"\u0000\u0000\u0000)%\u0001\u0000\u0000\u0000)&\u0001\u0000\u0000\u0000"+
-		")\'\u0001\u0000\u0000\u0000)(\u0001\u0000\u0000\u0000*\u0005\u0001\u0000"+
-		"\u0000\u0000+,\u0005\u0013\u0000\u0000,-\u0005\u0003\u0000\u0000-.\u0005"+
-		"\u0002\u0000\u0000./\u0007\u0000\u0000\u0000/0\u0005\u0002\u0000\u0000"+
-		"0\u0007\u0001\u0000\u0000\u000012\u0005\u0013\u0000\u000023\u0005\u0004"+
-		"\u0000\u000034\u0005\u0002\u0000\u000045\u0007\u0001\u0000\u000056\u0005"+
-		"\u0002\u0000\u00006\t\u0001\u0000\u0000\u000078\u0005\u0013\u0000\u0000"+
-		"89\u0005\u0005\u0000\u00009:\u0005\u0002\u0000\u0000:;\u0007\u0002\u0000"+
-		"\u0000;<\u0005\u0002\u0000\u0000<\u000b\u0001\u0000\u0000\u0000=>\u0005"+
-		"\u0013\u0000\u0000>?\u0005\b\u0000\u0000?@\u0005\u0002\u0000\u0000@A\u0007"+
-		"\u0003\u0000\u0000AB\u0005\u0002\u0000\u0000B\r\u0001\u0000\u0000\u0000"+
-		"CD\u0005\u0013\u0000\u0000DE\u0005\t\u0000\u0000EF\u0005\u0002\u0000\u0000"+
-		"FG\u0007\u0004\u0000\u0000GH\u0005\u0002\u0000\u0000H\u000f\u0001\u0000"+
-		"\u0000\u0000IJ\u0005\u0013\u0000\u0000JK\u0005\n\u0000\u0000KL\u0005\u0002"+
-		"\u0000\u0000LM\u0007\u0005\u0000\u0000MN\u0005\u0002\u0000\u0000N\u0011"+
-		"\u0001\u0000\u0000\u0000OP\u0005\u0013\u0000\u0000PQ\u0005\u000b\u0000"+
-		"\u0000QR\u0005\u0002\u0000\u0000RS\u0007\u0006\u0000\u0000ST\u0005\u0002"+
-		"\u0000\u0000T\u0013\u0001\u0000\u0000\u0000UV\u0005\u0013\u0000\u0000"+
-		"VW\u0005\u0006\u0000\u0000WX\u0005\u0002\u0000\u0000XY\u0007\u0007\u0000"+
-		"\u0000YZ\u0005\u0002\u0000\u0000Z\u0015\u0001\u0000\u0000\u0000[\\\u0005"+
-		"\u0013\u0000\u0000\\]\u0005\u0007\u0000\u0000]^\u0005\u0002\u0000\u0000"+
-		"^_\u0007\b\u0000\u0000_`\u0005\u0002\u0000\u0000`\u0017\u0001\u0000\u0000"+
-		"\u0000\u0002\u001e)";
+		"\u0010\u0012\u0014\u0016\u0000\t\u0002\u0000\u0001\u0001\u0013\u0013\u0002"+
+		"\u0000\u0001\u0001\u0011\u0011\u0002\u0000\u0001\u0001\u000f\u000f\u0002"+
+		"\u0000\u0001\u0001\u000e\u000e\u0002\u0000\u0001\u0001\u0010\u0010\u0002"+
+		"\u0000\u0001\u0001\u0012\u0012\u0002\u0000\u0001\u0001\u0016\u0016\u0003"+
+		"\u0000\u0001\u0001\u0015\u0015\u0018\u0018\u0002\u0000\u0001\u0001\u0015"+
+		"\u0015^\u0000\u0018\u0001\u0000\u0000\u0000\u0002\u001c\u0001\u0000\u0000"+
+		"\u0000\u0004)\u0001\u0000\u0000\u0000\u0006+\u0001\u0000\u0000\u0000\b"+
+		"1\u0001\u0000\u0000\u0000\n7\u0001\u0000\u0000\u0000\f=\u0001\u0000\u0000"+
+		"\u0000\u000eC\u0001\u0000\u0000\u0000\u0010I\u0001\u0000\u0000\u0000\u0012"+
+		"O\u0001\u0000\u0000\u0000\u0014U\u0001\u0000\u0000\u0000\u0016[\u0001"+
+		"\u0000\u0000\u0000\u0018\u0019\u0003\u0002\u0001\u0000\u0019\u001a\u0005"+
+		"\u0002\u0000\u0000\u001a\u0001\u0001\u0000\u0000\u0000\u001b\u001d\u0003"+
+		"\u0004\u0002\u0000\u001c\u001b\u0001\u0000\u0000\u0000\u001d\u001e\u0001"+
+		"\u0000\u0000\u0000\u001e\u001c\u0001\u0000\u0000\u0000\u001e\u001f\u0001"+
+		"\u0000\u0000\u0000\u001f\u0003\u0001\u0000\u0000\u0000 *\u0003\u0006\u0003"+
+		"\u0000!*\u0003\b\u0004\u0000\"*\u0003\n\u0005\u0000#*\u0003\u0014\n\u0000"+
+		"$*\u0003\u0016\u000b\u0000%*\u0003\f\u0006\u0000&*\u0003\u000e\u0007\u0000"+
+		"\'*\u0003\u0010\b\u0000(*\u0003\u0012\t\u0000) \u0001\u0000\u0000\u0000"+
+		")!\u0001\u0000\u0000\u0000)\"\u0001\u0000\u0000\u0000)#\u0001\u0000\u0000"+
+		"\u0000)$\u0001\u0000\u0000\u0000)%\u0001\u0000\u0000\u0000)&\u0001\u0000"+
+		"\u0000\u0000)\'\u0001\u0000\u0000\u0000)(\u0001\u0000\u0000\u0000*\u0005"+
+		"\u0001\u0000\u0000\u0000+,\u0005\u0014\u0000\u0000,-\u0005\u0004\u0000"+
+		"\u0000-.\u0005\u0003\u0000\u0000./\u0007\u0000\u0000\u0000/0\u0005\u0003"+
+		"\u0000\u00000\u0007\u0001\u0000\u0000\u000012\u0005\u0014\u0000\u0000"+
+		"23\u0005\u0005\u0000\u000034\u0005\u0003\u0000\u000045\u0007\u0001\u0000"+
+		"\u000056\u0005\u0003\u0000\u00006\t\u0001\u0000\u0000\u000078\u0005\u0014"+
+		"\u0000\u000089\u0005\u0006\u0000\u00009:\u0005\u0003\u0000\u0000:;\u0007"+
+		"\u0002\u0000\u0000;<\u0005\u0003\u0000\u0000<\u000b\u0001\u0000\u0000"+
+		"\u0000=>\u0005\u0014\u0000\u0000>?\u0005\t\u0000\u0000?@\u0005\u0003\u0000"+
+		"\u0000@A\u0007\u0003\u0000\u0000AB\u0005\u0003\u0000\u0000B\r\u0001\u0000"+
+		"\u0000\u0000CD\u0005\u0014\u0000\u0000DE\u0005\n\u0000\u0000EF\u0005\u0003"+
+		"\u0000\u0000FG\u0007\u0004\u0000\u0000GH\u0005\u0003\u0000\u0000H\u000f"+
+		"\u0001\u0000\u0000\u0000IJ\u0005\u0014\u0000\u0000JK\u0005\u000b\u0000"+
+		"\u0000KL\u0005\u0003\u0000\u0000LM\u0007\u0005\u0000\u0000MN\u0005\u0003"+
+		"\u0000\u0000N\u0011\u0001\u0000\u0000\u0000OP\u0005\u0014\u0000\u0000"+
+		"PQ\u0005\f\u0000\u0000QR\u0005\u0003\u0000\u0000RS\u0007\u0006\u0000\u0000"+
+		"ST\u0005\u0003\u0000\u0000T\u0013\u0001\u0000\u0000\u0000UV\u0005\u0014"+
+		"\u0000\u0000VW\u0005\u0007\u0000\u0000WX\u0005\u0003\u0000\u0000XY\u0007"+
+		"\u0007\u0000\u0000YZ\u0005\u0003\u0000\u0000Z\u0015\u0001\u0000\u0000"+
+		"\u0000[\\\u0005\u0014\u0000\u0000\\]\u0005\b\u0000\u0000]^\u0005\u0003"+
+		"\u0000\u0000^_\u0007\b\u0000\u0000_`\u0005\u0003\u0000\u0000`\u0017\u0001"+
+		"\u0000\u0000\u0000\u0002\u001e)";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

@@ -5,6 +5,7 @@ import java.util.*;
 public class EvalVisitor extends antlrGrammarBaseVisitor<Map<String,List<String>>> {
 
     private Map<String,List<String>> tokenList;
+    private Integer min_grade;
 
     @Override
     public Map<String,List<String>> visitStart(antlrGrammarParser.StartContext ctx) {
