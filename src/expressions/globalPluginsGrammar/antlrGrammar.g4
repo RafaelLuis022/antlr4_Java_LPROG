@@ -38,7 +38,6 @@ TYPE_NUMERICALSCALE: '(Range n1-n5)';
 TYPE_DECIMAL: '(Decimal Number)';
 TYPE_INTEGER: '(Integer Number)';
 TYPE_SHORTTEXT: '(Short Text)';
-MAX_SHORT_TEXT_LENGHT: '10';
 NUMERICALSCALEANSWER: 'n'[1-5];
 DATEANSWER: ('0'[1-9] | [1-2][0-9] | '3'[0-1]) '/' ('0'[1-9] | '1'[0-2]) '/' [0-9][0-9][0-9][0-9];
 DECIMALANSWER: [0-9]+'.'[0-9]+ | [0-9]+','[0-9]+;
