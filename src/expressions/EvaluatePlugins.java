@@ -208,10 +208,43 @@ public class EvaluatePlugins {
             parser.removeErrorListeners();
             parser.addErrorListener(new SyntaxErrorListener());
 
+
             try {
-                parser.start();
+                ParseTree parseTree = parser.start();
+                Map<String,Map<String,Integer>> map = parseWithAnswersVisitor(parseTree);
+                int cotacaoTotal = 0;
+                int numeroDePerguntas = 0;
+                int criteriaQ = 0; // numero minimo de respostas certas
+                int criteriaG = 0; // minimo de nota certa
+                for (String key: map.keySet()){
+                    for(String rightanswer:map.get(key).keySet()){
+                        numeroDePerguntas++;
+                        if(!rightanswer.startsWith("criteria")){
+                            cotacaoTotal += map.get(key).get(rightanswer);
+                        }else{
+                            if(rightanswer.startsWith("criteria_q")){
+                                criteriaQ += map.get(key).get(rightanswer);
+                            }else{
+                                criteriaG += map.get(key).get(rightanswer);
+                            }
+                        }
+
+                    }
+                }
+
+                if(cotacaoTotal < criteriaG){
+                    System.out.println("Total quote must not be less than the minimum");
+                    return false;
+                }
+                if(numeroDePerguntas < criteriaQ){
+                    System.out.println("Minimum number of certain questions must be less than total number of questions");
+                    return false;
+                }
+
+
                 return true;
             } catch (RuntimeException e) {
+                System.out.println(e.getMessage());
                 return false;
             }
         }
