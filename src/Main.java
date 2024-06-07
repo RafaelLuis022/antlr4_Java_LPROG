@@ -1,6 +1,8 @@
+import expressions.BasePlugin;
 import plugin.Plugin;
 
 import java.io.IOException;
+import java.util.Map;
 
 public class Main {
 
@@ -13,13 +15,13 @@ public class Main {
         String toEvaluateTxtPath = "src/resources/input/BlankForm.txt";
 
 
-
         Plugin plugin = new Plugin(dirPath, toEvaluateTxtPath);
-        System.out.println(plugin.isCorrect());
+        for ( Map.Entry<String,String> kv : plugin.evaluate().entrySet()){
+            System.out.println(kv.getKey()+":"+kv.getValue());
 
-        for (String p: plugin.evaluate().keySet()){
-          // System.out.println(p + ":" + plugin.evaluate().get(p));
         }
+
+
 
 
 

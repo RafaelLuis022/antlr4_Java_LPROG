@@ -1,3 +1,4 @@
+/*
 package expressions;
 
 import expressions.globalPluginsAnswersGrammar.ActionExprAnswersLexer;
@@ -126,6 +127,7 @@ public class EvaluatePlugins {
         Map<String, Map<String, Integer>> allQuestionsAnswersMap;
         try {
             String input = Files.readString(Paths.get(allQuestionsAnswersTxtPath));
+
             if (!isSyntaxCorrect(input, false)) {
                 throw new RuntimeException("Syntax error in allQuestionsAnswersTxt file");
             }
@@ -190,7 +192,7 @@ public class EvaluatePlugins {
             antlrGrammarParser parser = new antlrGrammarParser(tokens);
 
             parser.removeErrorListeners();
-            parser.addErrorListener(new SyntaxErrorListener());
+            parser.addErrorListener(new SyntaxErrorListener(toEvaluateTxtPath));
 
             try {
                 parser.start();
@@ -206,7 +208,7 @@ public class EvaluatePlugins {
             antlrAnswersGrammarParser parser = new antlrAnswersGrammarParser(tokens);
 
             parser.removeErrorListeners();
-            parser.addErrorListener(new SyntaxErrorListener());
+            parser.addErrorListener(new SyntaxErrorListener(allQuestionsAnswersTxtPath));
 
 
             try {
@@ -258,18 +260,18 @@ public class EvaluatePlugins {
             if (!isSyntaxCorrect(input, false)) {
                 return false;
             }
-
             input = Files.readString(Paths.get(toEvaluateTxtPath));
             if (!isSyntaxCorrect(input, true)) {
                 return false;
             }
         } catch (IOException e) {
-            System.out.println("Error in isSyntaxCorrect: " + e.getMessage());
+            System.out.println("Error in validating the syntax of the files: " + e.getMessage());
             throw new RuntimeException(e);
         }
-        return areQuestionsEqual(retrieveAllQuestionsAnswersMap(), retrieveToEvaluateMap());
+        return areQuestionsEqual(retrieveAllQuestionsAnswersMap(), retrieveToEvaluateMap()); //verificar se pelo menos as questoes sao iguais
 
     }
 
 
 }
+*/

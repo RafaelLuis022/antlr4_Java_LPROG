@@ -1,6 +1,6 @@
 package plugin;
 
-import expressions.EvaluatePlugins;
+import expressions.BasePlugin;
 
 import java.io.*;
 import java.util.Map;
@@ -19,7 +19,7 @@ public class Plugin {
 
     public Map<String,String> evaluate() {
         String pathToAllAnswersTxt = dirPath + "/" + BASE_ANSWERS_TXT_NAME;
-        EvaluatePlugins evaluatePlugins = new EvaluatePlugins(toEvaluateTxtPath,pathToAllAnswersTxt);
+        BasePlugin evaluatePlugins = new BasePlugin(toEvaluateTxtPath,pathToAllAnswersTxt);
         return evaluatePlugins.evaluate();
     }
 
@@ -27,7 +27,7 @@ public class Plugin {
 
     public boolean isCorrect() {
         String pathToAllAnswersTxt = dirPath + "/" + BASE_ANSWERS_TXT_NAME;
-        EvaluatePlugins evaluatePlugins = new EvaluatePlugins(toEvaluateTxtPath,pathToAllAnswersTxt);
+        BasePlugin evaluatePlugins = new BasePlugin(toEvaluateTxtPath,pathToAllAnswersTxt);
         return evaluatePlugins.isSyntaxCorrect();
     }
 
