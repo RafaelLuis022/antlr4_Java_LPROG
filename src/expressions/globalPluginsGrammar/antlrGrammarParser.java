@@ -1,4 +1,4 @@
-// Generated from C:/Users/HP/Desktop/lapr4/lprog/antlr4_Java_LPROG/src/expressions/globalPluginsGrammar/antlrGrammar.g4 by ANTLR 4.13.1
+// Generated from C:/Users/marci/OneDrive/Área de Trabalho/2324/2semestre/lprog/antlr4_Java_LPROG/src/expressions/globalPluginsGrammar/antlrGrammar.g4 by ANTLR 4.13.1
 package expressions.globalPluginsGrammar;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
@@ -39,7 +39,7 @@ public class antlrGrammarParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'n/a'", "'END'", null, "'(True/False)'", "'(HH:MM)'", "'(Date:dd/mm/yyyy)'", 
+			null, "'n/a'", "'END'", null, "'(True/False)'", "'(HMHH:MM)'", "'(Date:dd/mm/yyyy)'", 
 			"'(Multiple Choice)'", "'(Single Choice)'", "'(Range n1-n5)'", "'(Decimal Number)'", 
 			"'(Integer Number)'", "'(Short Text)'", null, null, null, null, null, 
 			null, null, null, null, "' '"

@@ -1,12 +1,20 @@
-#Criteria:q=5;grade_min=100
-# Are you familiar with any front end frameworks?(Short Text)
-react->22;
-# How do you optimize the performance of a websites front end?(Short Text)
-react->22;
-# What are the different types of HTML elements you commonly use?(Short Text)
-div->22;
-# Which programming languages do you prefer [A-Python,B-JavaScript,C-Java,D-C++]:?(Multiple Choice)
-A,B,C->22;
+#Criteria:q=5;grade_min=80
+# Are you familiar with any front end frameworks?(True/False)
+True->10;
+# What time do you start working on the frontend?(HMHH:MM)
+HM09:00->10;
+# When was the last time you updated your frontend skills?(Date:dd/mm/yyyy)
+10/01/2023->10;
 # How happy are you with your work?(Range n1-n5)
-n1->12;
+n4->10;
+# What is the average load time of your website?(Decimal Number)
+2.5->10;
+# How many projects have you worked on?(Integer Number)
+10->10;
+# Describe your experience with CSS frameworks?(Short Text)
+Bootstrap->10;
+# Which of the following frameworks have you used [A-Angular,B-React,C-Vue] ?(Multiple Choice)
+A,B->10;
+# What is your preferred frontend framework [A-React,B-Angular,C-Vue,D-Svelte] ?(Single Choice)
+A->10;
 END
