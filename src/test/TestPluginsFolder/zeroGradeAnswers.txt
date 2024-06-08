@@ -1,0 +1,11 @@
+# What is the average load time of your website?(Decimal Number)
+n/a
+# How many projects have you worked on?(Integer Number)
+n/a
+# Describe your experience with CSS frameworks?(Short Text)
+n/a
+# Which of the following frameworks have you used [A-Angular,B-React,C-Vue] ?(Multiple Choice)
+n/a
+# What is your preferred frontend framework [A-React,B-Angular,C-Vue,D-Svelte] ?(Single Choice)
+n/a
+END

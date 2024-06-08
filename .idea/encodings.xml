@@ -2,6 +2,20 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/expressions/globalPluginsGrammar/antlrGrammarParser.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/test/TestPluginsFolder/BaseAnswers.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/TestPluginsFolder/FullCorrectAnswers.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/TestPluginsFolder/HalfCorrectAnswers.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/TestPluginsFolder/moreQuestionsToPassThanThereAreOnFile.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/TestPluginsFolder/wrongSyntax.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/TestPluginsFolder/zeroGradeAnswers.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/TestPluginsFolder2/BaseAnswers.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/TestPluginsFolder2/FullCorrectAnswers.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/TestPluginsFolder2/HalfCorrectAnswers.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/TestPluginsFolder2/wrongNumberQuestions.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/TestPluginsFolder2/wrongSyntax.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/TestPluginsFolder2/zeroGradeAnswers.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/TestPluginsFolder3/BaseAnswers.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/TestPluginsFolder3/wrongNumberQuestions.txt" charset="UTF-8" />
     <file url="PROJECT" charset="windows-1252" />
   </component>
 </project>
